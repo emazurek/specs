@@ -32,6 +32,12 @@ plan9
   https://news.ycombinator.com/item?id=3537259
   https://hn.algolia.com/?query=plan9&sort=byPopularity&prefix&page=0&dateRange=all&type=story
 
+if we had URIs instead of multiaddr
+p2p+tcp://bootstrap.libp2p.io/QmFoo
+1. it doesn't fit the resource-on-server model
+2. there's too many protocol combinations to have one URI scheme for each
+church of context vs. church of self-description
+
 
 ## Namespaces
 
@@ -64,3 +70,6 @@ We only work on content-addressed stuff here. But we do think paths are the bett
 Security Model
 Pluggable origins? would make this a bit easier. suborigins step in right direction
 
+How to detect and intercept http-to-ipfs URLs in documents
+- $hash.ipfs.somedomain ?
+- could have links in document to //QmFoo.ipfs.link (http://) and //QmFoo (ipfs://)
